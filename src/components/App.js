@@ -8,7 +8,6 @@ const App = () => {
   const [wordCount,setWordCount] = useState(0)
   const ref = useRef()
   const [ignoreCase, setIgnoreCase] = useState(false)
-
   const highlight = (val,wordCase) =>{
     let newt = ''
     let i = 0
@@ -29,8 +28,6 @@ const App = () => {
 
     ref.current.innerHTML = newt
   }
-
-  
   const handleWordInput = (val) => {
     highlight(val,ignoreCase)
     setWord(val)
