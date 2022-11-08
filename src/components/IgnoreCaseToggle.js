@@ -1,16 +1,10 @@
 import React from 'react';
 
-export const ParagraphInput = ({ pRef }) => {
+export const IgnoreCaseToggle = ({checked,onChange}) => {
     return (
         <>
-            Enter paragraph here
-            <div id="paragraph-input"
-                contentEditable
-                // onChange={worker}
-                dangerouslySetInnerHTML={{ __html: pRef.current ? pRef.current.innerHTML : 'Enter Text Here' }}
-                ref={pRef}
-            >
-            </div>
+            <label htmlFor="ignore-case">Ignore case?</label>
+            <input type="checkbox" id="ignore-case" checked={checked} onChange={(e)=>onChange(!checked)} />
         </>
     )
 }
